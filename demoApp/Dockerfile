@@ -1,4 +1,4 @@
-FROM python:3-alpine
+FROM python:3-alpine as builder
 COPY . .    
 RUN ["pip", "install", "-r", "requirement.txt"]
 RUN ["python", "manage.py", "migrate"]

@@ -1,0 +1,14 @@
+services:
+  app:
+    build:               # if docker fle in same location we use only .
+      context: .                 # but image is named as builder 
+      target: builder          
+    container_name: django-app
+    environment:                    # environment variables 
+      - PORT: 8000             # inside a container
+    ports:
+      - '8000:8000'           # binding
+    
+    
+
+  
