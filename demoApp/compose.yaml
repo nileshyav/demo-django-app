@@ -5,9 +5,9 @@ services:
       target: builder          
     container_name: django-app
     environment:                    # environment variables 
-      - PORT: 8000             # inside a container
+      - PORT= 8000            # inside a container
     ports:
-      - '8000:8000'           # binding
+      - "8000:8000"          # binding
     
     
 
